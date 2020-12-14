@@ -29,7 +29,9 @@ const firstCharacter = string => {
 };
 
 const firstCharacters = (string, n) => {
-  // your code here
+let x = string.substring(0,n);
+return x; 
+console.log(x);
 };
 
 module.exports = {
