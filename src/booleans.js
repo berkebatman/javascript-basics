@@ -1,61 +1,144 @@
-const negate = a => {
-  // your code here
+  const negate = a => {
+  if (a === true) {x = false} else (x = true);
+  return  x;
 };
 
 const both = (a, b) => {
-  // your code here
+  let x = '';
+  if (a === true && b === true) {
+    x = true} else {x = false};
+    return x;
 };
 
 const either = (a, b) => {
-  // your code here
-};
+  let x = '';
+  if (a === true && b === true) {
+    x = true;
+  } 
+    else if (a === true && b === false) {
+      x = true;
+    }
+      else if (a === false && b === true) {
+        x = true;
+      }
+        else if (a === false && b === false) {
+          x = false;
+        }
+        else {alert = 'Invalid Variable';
+      }
+  
+  return x;
+}
 
 const none = (a, b) => {
-  // your code here
+  let x = '';
+  if (a === true && b === true) {
+    x = false;
+  } 
+    else if (a === true && b === false) {
+      x = false;
+    }
+      else if (a === false && b === true) {
+        x = false;
+      }
+        else if (a === false && b === false) {
+          x = true;
+        }
+        else {alert = 'Invalid Variable';
+      }
+  
+  return x
+ 
 };
 
 const one = (a, b) => {
-  // your code here
+  let x = '';
+  if (a === true && b === true) {
+    x = false;
+  } 
+    else if (a === true && b === false) {
+      x = true;
+    }
+      else if (a === false && b === true) {
+        x = true;
+      }
+        else if (a === false && b === false) {
+          x = false;
+        }
+        else {alert = 'Invalid Variable';
+      }
+  
+  return x
+ 
 };
 
+    
 const truthiness = a => {
-  // your code here
+  return !!a
 };
 
 const isEqual = (a, b) => {
-  // your code here
+  if (a === b) {
+    x = true; 
+  } else {x = false;}
+  return x
 };
 
 const isGreaterThan = (a, b) => {
-  // your code here
+  if (a > b) {
+    x = true; 
+  } else {x = false;}
+  return x
 };
 
 const isLessThanOrEqualTo = (a, b) => {
-  // your code here
+  if (a <= b) {
+    x = true; 
+  } else {x = false;}
+  return x
 };
 
 const isOdd = a => {
-  // your code here
+  if (a%2 === 0) {x = false;} else {x=true;}
+  return x
 };
 
 const isEven = a => {
-  // your code here
+  if (a%2 === 0) {x = true;} else {x=false;}
+  return x
 };
 
 const isSquare = a => {
-  // your code here
+  if (Number.isInteger(Math.sqrt(a))) {x = true;} else {x=false;}
+  return x
 };
 
 const startsWith = (char, string) => {
-  // your code here
+  if (string.charAt(0) === char) {x = true;} else {x=false;}
+  return x
 };
 
 const containsVowels = string => {
-  // your code here
+  for (i = 0; i <= string.length; i++);
+  let y = string.charAt(i);
+  if(y === "A" || y === "E" || y === "I" || y  === "O" || y === "U" || y === "a" || y === "e" || y === "i" || y  === "o" || y === "u") {
+    return true;
+  } else {
+    return false;
+  }
+
 };
 
 const isLowerCase = string => {
-  // your code here
+  for (i = 0; i <= string.length; i++);
+  let y = string.charAt(i);
+  if (y === y.toUpperCase()) {
+    x=true;
+  } else if (y !== y.toUpperCase) { 
+    x=false;}
+    else {}
+  
+  return x
 };
 
 module.exports = {
