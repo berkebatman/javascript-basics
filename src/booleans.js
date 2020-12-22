@@ -118,28 +118,28 @@ const startsWith = (char, string) => {
   return x
 };
 
-const containsVowels = string => {
-  for (i = 0; i <= string.length; i++);
-  let y = string.charAt(i);
-  if(y === "A" || y === "E" || y === "I" || y  === "O" || y === "U" || y === "a" || y === "e" || y === "i" || y  === "o" || y === "u") {
-    return true;
-  } else {
-    return false;
-  }
-
+ const containsVowels = string => {
+   for (i = 0; i <= string.length; i++);
+   let y = string.charAt(i);
+   if(y === "A" || y === "E" || y === "I" || y  === "O" || y === "U" || y === "a" || y === "e" || y === "i" || y  === "o" || y === "u") {
+     return true;
+   } else {
+     return false;
+   }
 };
 
 const isLowerCase = string => {
-  for (i = 0; i <= string.length; i++);
-  let y = string.charAt(i);
+ for (i = 0; i <= string.length; i++);
+   let y = string.charAt(i);
   if (y === y.toUpperCase()) {
-    x=true;
-  } else if (y !== y.toUpperCase) { 
+       x=true;
+   } else if (y !== y.toUpperCase) { 
     x=false;}
-    else {}
+     else {}
   
-  return x
+ return x
 };
+
 
 module.exports = {
   negate,
