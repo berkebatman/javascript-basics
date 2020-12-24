@@ -119,25 +119,13 @@ const startsWith = (char, string) => {
 };
 
  const containsVowels = string => {
-   for (i = 0; i <= string.length; i++);
-   let y = string.charAt(i);
-   if(y === "A" || y === "E" || y === "I" || y  === "O" || y === "U" || y === "a" || y === "e" || y === "i" || y  === "o" || y === "u") {
-     return true;
-   } else {
-     return false;
-   }
+  return string
+  .split("")
+  .some(letter => ["a", "e", "i", "o", "u"].includes(letter.toLowerCase()));
 };
 
 const isLowerCase = string => {
- for (i = 0; i <= string.length; i++);
-   let y = string.charAt(i);
-  if (y === y.toUpperCase()) {
-       x=true;
-   } else if (y !== y.toUpperCase) { 
-    x=false;}
-     else {}
-  
- return x
+  return string === string.toLowerCase();
 };
 
 

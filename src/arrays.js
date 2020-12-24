@@ -1,115 +1,80 @@
 const getNthElement = (index, array) => {
-  let x = array[index];
-  
-  // for (let i = 0; i <= array.length; i++)
-  // {
-    if (index <= array.length) {
-      return x;
-   } else 
-      setTimeout(getNthElement, 5);
-  // }
- };
+  const newIndex = index;
+  if (newIndex < array.length) {
+    return array[newIndex];
+  }
 
+  return array[newIndex - array.length];
+};
 
 const arrayToCSVString = array => {
-  let stringArray = array.toString();
-  console.log(stringArray);
-  return stringArray;
+  return array.join();
 };
 
 const csvStringToArray = string => {
-  const csvArray = string.split(',');
-  return csvArray;
+  return string.split(",");
 };
 
 const addToArray = (element, array) => {
-   array.push(element);
-   console.log(array);  //niye burda 'return array' kullandigimizda calismaz?
+  array.push(element);
 };
 
-
 const addToArray2 = (element, array) => {
-  // let array2 = [];
-  const newArr = [
-    ...array,
-    element,
-  ];
-  // let array2 = [array.push(element.value)];
-  return newArr;
-  // console.log(array2);
-  // console.log(array2);
-  // console.log(array); 
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  let removedItem = array.splice(index, 1);
-  return removedItem; 
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  let x = numbers.map(String);
-  return x;
+  return numbers.map(string => string.toString());
 };
 
 const uppercaseWordsInArray = strings => {
-  let x = strings.map(string => string.toUpperCase());
-  return x;
-
+  return strings.map(string => string.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  function reverseStr() {
-  let spltStr = strings.split();
-  let reverseArray = spltStr.reverse();   
-  let x = reverseArray.join();
-  return x;
-  }
- 
-  finalArray = strings.map(reverseStr());
-   
-  return finalArray;
+  return strings.map(string =>
+    string
+      .split("")
+      .reverse()
+      .join("")
+  );
 };
 
 const onlyEven = numbers => {
-  let evenNumbers = numbers.filter(number => number % 2 === 0);
-  console.log(evenNumbers);
-  return evenNumbers;
+  return numbers.filter(element => element % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  let removedItem = array.splice(index, 1);
-  return array; 
+  return array.filter((element, arIn) => arIn !== index);
 };
 
 const elementsStartingWithAVowel = strings => {
-  let arr = [];
+  const vowels = ["a", "e", "i", "o", "u"];
 
-  for (i = 0; i <= strings.length; i++) {
-    if (strings[i].charAt(0) === "A" || strings[i].charAt(0) === "E" || strings[i].charAt(0) === "I" || strings[i].charAt(0)  === "O" || strings[i].charAt(0) === "U" || strings[i].charAt(0) === "a" || strings[i].charAt(0) === "e" || strings[i].charAt(0) === "i" || strings[i].charAt(0)  === "o" || strings[i].charAt(0) === "u") {
-      arr.push(strings[i])
-    } else {
-      console.log(strings[i]);
-    };
-
-  return arr;
-
-  } 
+  return strings.filter(word => {
+    const firstLetter = word[0].toLowerCase();
+    return vowels.includes(firstLetter);
+  });
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.split(" ").join("");
 };
 
 const sumNumbers = numbers => {
-  let sum = numbers.reduce(function(a, b){
-  return a + b;
-}, 0);
-  
-return sum;
+  return numbers.reduce((total, number) => {
+    return total + number
+  }, 0);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  const reverseString = (item) => item.split('').reverse().join('');
+
+  return strings.map(reverseString).sort().map(reverseString)
 };
 
 module.exports = {
